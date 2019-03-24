@@ -2,7 +2,7 @@ var google = require("google");
 let sanitizeHtml = require("sanitize-html");
 let Countable = require("countable");
 
-google.resultsPerPage = 25;
+google.resultsPerPage = 20;
 var nextCounter = 0;
 let density = require("density");
 let density2 = require("density");
@@ -61,37 +61,37 @@ export const getResults = str => {
         }
       }
 
-      if (nextCounter < 1) {
-        nextCounter += 1;
-        if (res.next) res.next();
-      } else {
-        let dens = totalDensity / totalNum;
-        let wrds = totalWords / totalNum;
-        let cnt = totalCount / totalNum;
-        console.log(cnt);
-        totalDensity = 0;
-        totalNum = 0;
-        nextCounter = 0;
-        totalWords = 0;
-        totalCount = 0;
-        // withoutKeyword = 0;
-        // let topDict = {}
-        // for(let key in Object.keys(wordDens)){
-        //   let newVal = wordDens[key];
-        //   for(let i=0; i<10;i++){
-        //     let val = topDict[i.toString()]
-        //     if(newVal>= val)
-        //   }
-        //   /* use key/value for intended purpose */
-        // }
+      // if (nextCounter < 1) {
+      //   nextCounter += 1;
+      //   if (res.next) res.next();
+      // } else {
+      let dens = totalDensity / totalNum;
+      let wrds = totalWords / totalNum;
+      let cnt = totalCount / totalNum;
+      console.log(cnt);
+      totalDensity = 0;
+      totalNum = 0;
+      nextCounter = 0;
+      totalWords = 0;
+      totalCount = 0;
+      // withoutKeyword = 0;
+      // let topDict = {}
+      // for(let key in Object.keys(wordDens)){
+      //   let newVal = wordDens[key];
+      //   for(let i=0; i<10;i++){
+      //     let val = topDict[i.toString()]
+      //     if(newVal>= val)
+      //   }
+      //   /* use key/value for intended purpose */
+      // }
 
-        let res = {
-          density: dens,
-          words: wrds
-        };
-        withoutKeyword = 0;
-        resolve(res);
-      }
+      let resulto = {
+        density: dens,
+        words: wrds
+      };
+      withoutKeyword = 0;
+      resolve(resulto);
+      // }
     });
   });
 };

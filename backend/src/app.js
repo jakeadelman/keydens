@@ -2,7 +2,7 @@ var google = require("google");
 let sanitizeHtml = require("sanitize-html");
 let Countable = require("countable");
 
-google.resultsPerPage = 20;
+google.resultsPerPage = 15;
 var nextCounter = 0;
 let density = require("density");
 let density2 = require("density");

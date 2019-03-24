@@ -183,7 +183,7 @@ export default function Search() {
         <div className="inner-search-wrap">
           <div className="search-title">
             <strong>
-              fetching data for top 50 results...
+              fetching data for top 15 results...
               <br /> this could take a minute.
             </strong>
           </div>

@@ -1,0 +1,29 @@
+{
+  "name": "keyword-density",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "countable": "^3.0.1",
+    "density": "^0.1.0",
+    "express": "^4.16.4",
+    "google": "^2.1.0",
+    "ineed": "^1.1.0",
+    "marked": "^0.6.1",
+    "nodemon": "^1.18.10",
+    "request": "^2.88.0",
+    "sanitize-html": "^1.20.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3"
+  },
+  "scripts": {
+    "app": "babel-node app.js",
+    "start": "nodemon --exec babel-node server.js"
+  }
+}

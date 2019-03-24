@@ -2,6 +2,7 @@ import { getResults } from "./app";
 
 var appRouter = function(app) {
   app.get("/keyword/:word", function(req, res) {
+    req.setTimeout(0);
     console.log(req.params);
     let string = req.params.word.replace(/\+/g, " ");
     console.log(string);

@@ -21,7 +21,7 @@ export default function Search() {
       Cookies.set("wrds", ciphertext, { expires: 0.02083333333 });
       console.log("fetching");
       let formattedKw = keyword.split(" ").join("+");
-      let getStr = "http://localhost:4000/keyword/" + formattedKw;
+      let getStr = "https://api.keydens.urldoctor.com/keyword/" + formattedKw;
       setLoading(true);
       fetch(getStr);
     } else {

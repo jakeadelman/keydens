@@ -6,7 +6,9 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(
+  cors({ origin: ["http://localhost:3000", "https://keydens.urldoctor.com"] })
+);
 
 routes(app);
 
